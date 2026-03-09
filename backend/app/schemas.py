@@ -69,7 +69,7 @@ class ProjectResponse(BaseModel):
         from_attributes = True
 
 
-# ---------- TASKS ----------
+# ------- TASKS -------
 TaskStatus = Literal["todo", "in_progress", "done"]
 TaskPriority = Literal["low", "medium", "high"]
 
