@@ -20,6 +20,7 @@ Dodatkowo system obsługuje tryb **offline**, który pozwala na pracę bez poł�
 * Tryb offline z lokalnym zapisem danych
 * Synchronizacja danych po przywróceniu połączenia z internetem
 * Dokumentacja API dostępna w Swagger
+* Nowoczesny interfejs użytkownika (Dashboard, Projekty, Sidebar, Finance, Logowanie)
 
 ---
 
@@ -70,16 +71,18 @@ System wykorzystuje trzy główne tabele:
 Users
 Projects
 Tasks
+Finanse
 
 Relacje pomiędzy tabelami:
 
 * jeden użytkownik może posiadać wiele projektów
 * jeden projekt może zawierać wiele zadań
+* jeden użytkownik może posiadać wiele wpisów finansowych
 
 Schemat relacji:
 
 User → Projects → Tasks
-
+User → Finance
 ---
 
 ## Endpointy API
@@ -104,6 +107,14 @@ GET /tasks – pobranie wszystkich zadań
 POST /tasks – utworzenie zadania
 PUT /tasks/{id} – edycja zadania
 DELETE /tasks/{id} – usunięcie zadania
+
+### Finanse
+
+GET /finance – pobranie wszystkich wpisów finansowych
+POST /finance – dodanie nowego wpisu
+GET /finance/{id} – pobranie wpisu po ID
+PUT /finance/{id} – edycja wpisu
+DELETE /finance/{id} – usunięcie wpisu
 
 ---
 
@@ -179,3 +190,5 @@ Autorzy:
 
 Oleh Bilko 51751
 Maksym Bartashuk 51750
+Zhanna Dariychuk 51752
+Mariia Avramenko 51749
